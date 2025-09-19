@@ -18,9 +18,7 @@
     text-decoration: underline;
 }
 
-.main_content{
-     opacity:0.2
-}
+
 .main_content h1 {
     font-size: 32px;
     text-align: center;
@@ -52,7 +50,8 @@
 
 
 .header{
-    background-color: burlywood;
+    background-color: rgba(0,0,0,0.5);
+    color: burlywood;
     border-radius: 25px;
    
     
