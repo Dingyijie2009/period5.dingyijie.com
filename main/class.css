@@ -25,7 +25,10 @@
     color: #6b2c2c;  
     margin-bottom: 20px;
 }
-
+.main_content ur{
+    padding: 0%;
+    margin: 0%;
+}
 
 .main_content p {
     font-size: 18px;
@@ -64,6 +67,7 @@
     text-align: center;
 
 }
+
 .header_link{
     text-align: center;
 
