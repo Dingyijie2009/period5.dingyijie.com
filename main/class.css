@@ -1,3 +1,16 @@
+/* 定义一个名为"blink"的关键帧动画 */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+
+
+
 
 .header_content h1 {
     font-size: 36px;
@@ -37,6 +50,7 @@
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
+    animation: blink 2s infinite
  }
 
  .header_content button:hover {
@@ -70,17 +84,49 @@
    
     
 }
-.header_link a{
-    color: #1506ee;
+.header_link {
+    border: 2px solid #241002;      
+    border-radius: 50px;           
+    background: #fffbe6;          
+    padding: 10px 0;               
+    margin: 16px auto;             
+    width: 90%;                     
+    display: flex;
+    justify-content: center;
+    gap: 32px;                     
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
+}
+.header_link a {
     font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: auto;
-    margin-right: 30px;
-    text-align: center;
-
+    color: #1a237e;
+    text-decoration: none;
+    padding: 4px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+.header_link a:hover {
+    background: #ff82cf;
+    animation: blink 1s infinite
 }
 
-.header_link{
-    text-align: center;
 
+@media (max-width: 600px) {
+    .header_link {
+        flex-direction: column;
+        gap: 12px;
+        width: 98%;
+        padding: 10px 0;
+    }
+    .main_content h1 {
+        font-size: 24px;
+    }
+    .header_content h1 {
+        font-size: 24px;
+        width: 98%;
+        padding: 10px;
+    }
+    .main_content p {
+        font-size: 16px;
+        width: 98%;
+    }
 }
