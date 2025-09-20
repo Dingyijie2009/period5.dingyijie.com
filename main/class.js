@@ -9,15 +9,12 @@ function downloadFile(filename, content, type="text/plain") {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("download-html").onclick = () => {
+    document.getElementById("download-all").onclick = () => {
         fetch("index.html") 
             .then(r => r.text())
             .then(text => {
                 downloadFile("my-page.html", text, "text/html");
             });
-    };
-
-    document.getElementById("download-css").onclick = () => {
         fetch("class.css")
             .then(r => r.text())
             .then(text => {

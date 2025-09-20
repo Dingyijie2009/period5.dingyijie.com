@@ -28,7 +28,20 @@
 .main_content ul{
     margin-left: 8%;
 }
+ .header_content button {
+    background-color: #4a73d9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+ }
 
+ .header_content button:hover {
+    background-color: #3b5bb5;
+ }
 .main_content p {
     font-size: 18px;
     line-height: 1.6;
