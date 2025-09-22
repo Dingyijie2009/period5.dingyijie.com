@@ -41,7 +41,7 @@
 .main_content ul{
     margin-left: 8%;
 }
- .header_content button {
+ .header button {
     background-color: #4a73d9;
     color: white;
     border: none;
@@ -53,7 +53,7 @@
     animation: blink 2s infinite
  }
 
- .header_content button:hover {
+ .header button:hover {
     background-color: #3b5bb5;
  }
 .main_content p {
