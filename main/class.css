@@ -130,3 +130,19 @@
         width: 98%;
     }
 }
+
+@media (max-width: 1200px) {
+    .main_content h1 {
+        font-size: 30px;
+    }
+    .header_content h1 {
+        font-size: 30px;
+        width: 98%;
+        padding: 8px;
+    }
+    .main_content p {
+        font-size: 20px;
+        width: 98%;
+    }
+
+}
