@@ -85,7 +85,7 @@
     
 }
 .header_background {
-    background-image: url('images/title.jpg');
+    background-image: url('./images/title.jpg');
     background-size: cover;
     background-position: center;
     padding: 20px 0;
