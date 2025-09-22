@@ -84,6 +84,15 @@
    
     
 }
+.header_background {
+    background-image: url('images/title.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    
+}
 .header_link {
     border: 2px solid #241002;      
     border-radius: 50px;           
