@@ -138,12 +138,12 @@
 
 .main_row {
     display: flex;
-    align-items: flex-start; /* Align top edges */
-    gap: 40px; /* Space between columns */
+    align-items: flex-start; 
+    gap: 40px; 
     width: 100%;
 }
 .main_content {
-    flex: 1; /* Take remaining space */
+    flex: 0; 
 }
 
 @media (max-width: 600px) {
