@@ -112,6 +112,18 @@
 }
 
 
+.picture {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.picture img {
+    border-radius: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+    
+
+
 @media (max-width: 600px) {
     .header_link {
         flex-direction: column;
