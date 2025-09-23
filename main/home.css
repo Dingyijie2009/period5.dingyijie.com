@@ -133,7 +133,7 @@
 }
 .header_picture img {
     width: 100%;
-    height: auto; 
+    max-height: 300px; /* 或你想要的高度 */
     object-fit: cover;
     border-radius: 20px;
 }
