@@ -120,6 +120,11 @@
     border-radius: 15px;
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 图片居中 */
+    margin-bottom: 20px;
+}
 }
     
 .header_picture {
