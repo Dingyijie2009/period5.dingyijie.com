@@ -128,15 +128,18 @@
 }
     
 .header_picture {
-    width: 40%;
-    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
 }
 .header_picture img {
-    width: 100%;
-    max-height: 300px; /* 或你想要的高度 */
+    width: 60%; 
+    height: auto;
     object-fit: cover;
     border-radius: 20px;
+    margin: 0 auto;
 }
 
 .main_row {
