@@ -127,14 +127,13 @@
 }
     
 .header_picture {
+    width: 100%;
     text-align: center;
     margin-bottom: 20px;
-    display: flex;
 }
 .header_picture img {
-    border-radius: 15px;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto; 
 }
 
 .main_row {
