@@ -129,6 +129,7 @@
 .header_picture {
     text-align: center;
     margin-bottom: 20px;
+    display: flex;
 }
 .header_picture img {
     border-radius: 15px;
