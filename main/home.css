@@ -130,8 +130,9 @@
 .header_picture {
     height:100px;
     border-radius: 20px;
+    background-repeat: no-repeat;
     background-image: url('images/title.jpg');
-    background-size: auto;
+    background-size: contain;
     background-position: center;
 }
 
