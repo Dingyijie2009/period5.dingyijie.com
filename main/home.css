@@ -128,7 +128,8 @@
 }
     
 .header_picture {
-    width: 88%;
+    width: 200px;
+    height:100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,8 +142,8 @@
         height: 100%;
         object-fit: cover;
         border-radius: 20px;
-        padding-right:230px;
-        padding-left:200px;
+        background-repeat:repeat;
+        background-size: auto;
 }
 
 .main_row {
