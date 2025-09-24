@@ -136,6 +136,7 @@
     background-size: auto 100%;
     background-position: 0 0;
     animation: scrollRight 10s linear infinite;
+    animation: blink 2s infinite
     
 }
 
