@@ -128,9 +128,7 @@
 }
     
 .header_picture {
-    width: 200px;
     height:100px;
-    margin-bottom: 20px;
     border-radius: 20px;
     background-image: url('images/title.jpg');
     background-size: auto;
