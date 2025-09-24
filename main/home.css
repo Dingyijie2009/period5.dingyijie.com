@@ -141,7 +141,8 @@
         height: 100%;
         object-fit: cover;
         border-radius: 20px;
-        margin: 0 auto;
+        padding-right:230px;
+        padding-left:200px;
 }
 
 .main_row {
