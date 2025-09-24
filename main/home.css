@@ -135,7 +135,7 @@
     background-image: url('images/title.jpg');
     background-size: auto 100%;
     background-position: 0 0;
-    animation: scrollright 10s linear infinite;
+    animation: scrollRight 10s linear infinite;
     
 }
 
