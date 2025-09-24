@@ -8,6 +8,14 @@
   }
 }
 
+@keyframes blink_2 {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 
 
 
@@ -81,7 +89,7 @@
 .header{
     background-color: rgba(184, 181, 12, 0.788);
     border-radius: 25px;
-    animation: blink 2s infinite
+    animation: blink_2 2s infinite
    
     
 }
