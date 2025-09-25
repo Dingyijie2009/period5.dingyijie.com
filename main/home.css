@@ -79,15 +79,16 @@
 
 
 .header{
-    background-color: rgba(184, 181, 12, 0.788);
+    background-color: rgba(212, 164, 7, 0.788);
     border-radius: 25px;
+   
+    
 }
 
 
 .header_link {
     border: 2px solid #241002;      
-    border-radius: 50px;           
-    background: #fffbe6;          
+    border-radius:      
     padding: 10px 0;               
     margin: 16px auto;             
     width: 90%;                     

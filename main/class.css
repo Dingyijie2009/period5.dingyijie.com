@@ -106,7 +106,12 @@
 }
 .header_link a:hover {
     background: #ff82cf;
+
     animation: blink 1s infinite
+}
+.header_link a:visited {
+    background: #2cda0a;
+    
 }
 
 
