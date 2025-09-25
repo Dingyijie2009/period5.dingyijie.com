@@ -41,7 +41,7 @@
 .main_content ul{
     margin-left: 8%;
 }
- .header_content button {
+ .header button {
     background-color: #4a73d9;
     color: white;
     border: none;
@@ -53,7 +53,7 @@
     animation: blink 2s infinite
  }
 
- .header_content button:hover {
+ .header button:hover {
     background-color: #3b5bb5;
  }
 .main_content p {
@@ -81,9 +81,9 @@
 .header{
     background-color: rgba(184, 181, 12, 0.788);
     border-radius: 25px;
-   
-    
 }
+
+
 .header_link {
     border: 2px solid #241002;      
     border-radius: 50px;           
@@ -106,14 +106,55 @@
 }
 .header_link a:hover {
     background: #ff82cf;
-
     animation: blink 1s infinite
 }
-.header_link a:visited {
-    background: #2cda0a;
+
+
+.picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.picture img {
+    border-radius: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+    
+.header_picture {
+    width: 100%;
+    height:150px;
+    border-radius: 20px;
+    background-repeat: repeat-x;
+    background-image: url('images/title.jpg');
+    background-size: auto 100%;
+    background-position: 0 0;
+    animation: scrollRight 10s linear infinite;
     
 }
 
+@keyframes scrollRight {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.main_row {
+    display: flex;
+    align-items: flex-start; 
+    gap: 40px; 
+    width: 100%;
+}
+.main_content {
+    flex: 1; 
+}
 
 @media (max-width: 600px) {
     .header_link {
