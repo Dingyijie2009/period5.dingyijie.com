@@ -1,4 +1,4 @@
-unction downloadFile(filename, content, type="text/plain") {
+function downloadFile(filename, content, type="text/plain") {
     const blob = new Blob([content], { type });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
