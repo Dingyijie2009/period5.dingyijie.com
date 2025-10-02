@@ -145,3 +145,14 @@ button {
     margin-right: 10px;
 }
 
+body h1 {
+    text-align: center;
+    color: #4a73d9;
+    margin-bottom: 20px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #aad803;
+    color: #333;
+}   
