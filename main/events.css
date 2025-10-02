@@ -1,6 +1,6 @@
 /* Events Notice Decoration */
 .notice-box {
-    background-image: url('images/move.gif');
+
     border: 3px solid #f80808;
     border-radius: 24px;
     box-shadow: 0 6px 24px rgba(255,152,0,0.15);
