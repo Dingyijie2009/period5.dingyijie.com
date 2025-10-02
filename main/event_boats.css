@@ -39,7 +39,7 @@ img {
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
-    
+
 }
 button {
     background-color: #4a73d9;
@@ -101,3 +101,47 @@ button {
 .footer a:hover {
     text-decoration: underline;
 }
+
+.header_link {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+}
+.header_link a {
+    margin: 0 15px;
+    font-size: 18px;
+    color: #4a73d9;
+    text-decoration: none;
+}
+.header_link a:hover {
+    text-decoration: underline;
+}
+.price {
+    background-color: #e9f0ff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.price p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.price ul {
+    list-style-type: none;
+    padding: 0;
+}
+.price li {
+    margin-bottom: 5px;
+    font-size: 16px;
+}       
+.price img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
