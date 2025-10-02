@@ -84,7 +84,7 @@ img {
     margin-bottom: 20px;
 }
 button {
-    width: 1000px;
+    width: 100%;
     background-color: #4a73d9;
     color: white;
     border: none;
@@ -97,6 +97,7 @@ button {
 button:hover {
     background-color: #3b5bb5;
 }
+
 @keyframes blink {
     0%, 100% { background-color: #eee2e3; }
     50% { background-color: #ec0909; }

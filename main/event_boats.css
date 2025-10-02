@@ -42,7 +42,7 @@ img {
 
 }
 button {
-    width: 1000px;
+    width: 100%;
     background-color: #4a73d9;
     color: white;
     border: none;
@@ -50,9 +50,8 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-     animation: blink 2s infinite;
-     text-align: center;
- }
+    animation: blink 2s infinite;
+}
  button:hover {
     background-color: #3b5bb5;
  }
