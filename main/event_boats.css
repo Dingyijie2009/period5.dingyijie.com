@@ -56,8 +56,8 @@ button {
     background-color: #3b5bb5;
  }
 @keyframes blink {
-    0%, 100% { background-color: #4a73d9; }
-    50% { background-color: #3b5bb5; }
+    0%, 100% { background-color: #eee2e3; }
+    50% { background-color: #ec0909; }
 }
    
 .header {
