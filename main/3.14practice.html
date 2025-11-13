@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3.14 Practice</title>
+  <link href="3.14.css " rel="stylesheet" type="text/css"/>
+  <script src="3.14.js"></script>
+</head>
+<body>
+  <h2 style="text-align:center; color:darkred;">Product Registration</h2>
+
+  <form id="regForm">
+    <!-- Section 1: Personal Info -->
+    <fieldset class="section">
+      <div class="row">
+        <label for="first">First Name:</label>
+        <input type="text" id="first1">
+        <label for="last" class="inline-label">Last Name:</label>
+        <input type="text" id="last">
+      </div>
+
+      <div class="row">
+        <label for="a1">Address #1:</label>
+        <input type="text" id="a1" style="width:400px;">
+      </div>
+
+      <div class="row">
+        <label for="a2">Address #2:</label>
+        <input type="text" id="a2" style="width:400px;">
+      </div>
+
+      <div class="row multi">
+        <label for="city">City:</label>
+        <input type="text" id="city" style="width:120px;">
+        <label for="province" class="inline-label">Province:</label>
+        <input type="text" id="province" style="width:60px;">
+        <label for="postcode" class="inline-label">Postal Code:</label>
+        <input type="text" id="postcode" style="width:80px;">
+      </div>
+
+      <div class="row">
+        <label for="country">Country:</label>
+        <input type="text" id="country">
+      </div>
+    </fieldset>
+
+    <!-- Section 2: Purchase Info -->
+    <fieldset class="section">
+      <div class="row">
+        <label for="item">Item Purchased:</label>
+        <select id="item">
+          <option>LanPass 115</option>
+          <option>LanPass 200</option>
+          <option>LanPass Pro</option>
+        </select>
+
+        <label for="date" class="inline-label">Purchased Date:</label>
+        <input type="text" id="date" value="11/24/2023" readonly>
+      </div>
+
+      <div class="row">
+        <label for="serial">Serial Number:</label>
+        <input type="text" id="serial" style="width:200px;">
+      </div>
+    </fieldset>
+
+    <!-- Section 3: Usage and System -->
+    <fieldset class="section">
+      <div class="groups-container">
+        <div class="group">
+          <legend>Used For (check one)</legend>
+            <label><input type="radio" name="use" value="home"> Home</label><br>
+            <label><input type="radio" name="use" value="business"> Business</label><br>
+            <label><input type="radio" name="use" value="charity"> Religious or Charitable Institution</label><br>
+            <label><input type="radio" name="use" value="gov"> Government</label><br>
+            <label><input type="radio" name="use" value="edu"> Educational Institution</label>
+         </div>
+
+      <div class="group">
+        <legend>Network Operating System (check all that apply)</legend>
+        <label><input type="checkbox" value="netware"> Netware</label><br>
+        <label><input type="checkbox" value="banyan"> Banyan Vines</label><br>
+        <label><input type="checkbox" value="windows"> Windows</label><br>
+        <label><input type="checkbox" value="ibm"> IBM Lan Server</label><br>
+        <label><input type="checkbox" value="pcnfs"> PC/NFS</label>
+     </div>
+  </div>
+</fieldset>
+
+    <!-- Section 4: Comments -->
+    <fieldset class="section">
+      <label for="comment">Comments</label><br>
+      <textarea id="comment" rows="4" cols="40"></textarea><br>
+      <div class="buttons">
+        <button type="button" onclick="send()">Send Registration</button>
+        <button type="button" onclick="cancel">Cancel</button>
+      </div>
+    </fieldset>
+  </form>
+</body>
+</html>
