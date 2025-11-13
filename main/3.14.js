@@ -21,5 +21,4 @@ function send(){
         "Date: " + date + "\n" +
         "Comment: " + comment
       );
-    }
 }
