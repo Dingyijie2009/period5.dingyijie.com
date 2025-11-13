@@ -16,6 +16,8 @@ function send(){
         "Name: " + first + " " + last + "\n" +
         "City: " + city + "\n" +
         "Country: " + country + "\n" +
+        "Province: " + province + "\n" +
+        "Postal Code: " + postcode + "\n" +
         "Item: " + item + "\n" +
         "Serial: " + serial + "\n" +
         "Date: " + date + "\n" +
