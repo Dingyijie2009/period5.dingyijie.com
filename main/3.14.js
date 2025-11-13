@@ -1,16 +1,16 @@
 function send(){
-  ler first = document.getElementBtId('first1').value;
-  ler last = document.getElementBtId('last').value;
-  ler a1 = document.getElementBtId('a1').value;
-  ler a2 = document.getElementBtId('a2').value;
-  ler city = document.getElementBtId('city').value;
-  ler province = document.getElementBtId('province').value;
-  ler postcode = document.getElementBtId('postcode').value;
-  ler country = document.getElementBtId('country').value;
-  ler date = document.getElementBtId('date').value;
-  ler serial = document.getElementBtId('serial').value;
-  ler comment = document.getElementBtId('comment').value;
-  
+  let first = document.getElementById('first').value;
+  let last = document.getElementById('last').value;
+  let a1 = document.getElementById('a1').value;
+  let a2 = document.getElementById('a2').value;
+  let city = document.getElementById('city').value;
+  let province = document.getElementById('province').value;
+  let postcode = document.getElementById('postcode').value;
+  let country = document.getElementById('country').value;
+  let date = document.getElementById('date').value;
+  let serial = document.getElementById('serial').value;
+  let comment = document.getElementById('comment').value;
+
   alert(
         "Product Registration Info:\n\n" +
         "Name: " + first + " " + last + "\n" +
