@@ -6,10 +6,10 @@
   <script src="3.14.js"></script>
 </head>
 <body>
-  <h2 style="text-align:center; color:darkred;">Product Registration---Power by <a href="https://dingyijie.com"> Yijie</a>and<a href="https://chatgpt.com"> ChatGPT</a></h2>
+  <em><h2 style="text-align:center; color:darkred;size:30px;font-size:45px;">Product Registration</h2><h5>Powered by <a href="https://dingyijie.com"> Yijie</a> and <a href="https://chatgpt.com"> ChatGPT</a> (style's rules)</h5><em>
 
   <form id="regForm">
-    <!-- Section 1: Personal Info -->
+    
     <fieldset class="section">
       <div class="row">
         <label for="first">First Name:</label>
@@ -43,7 +43,7 @@
       </div>
     </fieldset>
 
-    <!-- Section 2: Purchase Info -->
+   
     <fieldset class="section">
       <div class="row">
         <label for="item">Item Purchased:</label>
@@ -54,7 +54,8 @@
         </select>
 
         <label for="date" class="inline-label">Purchased Date:</label>
-        <input type="text" id="date" value="11/24/2023" readonly>
+        <input type="text" id="date" value="" readonly>
+        <button type="button" onclick="get_date()">Click to get date</button>
       </div>
 
       <div class="row">
@@ -63,38 +64,43 @@
       </div>
     </fieldset>
 
-    <!-- Section 3: Usage and System -->
+   
     <fieldset class="section">
       <div class="groups-container">
         <div class="group">
           <legend>Used For (check one)</legend>
-            <label><input type="radio" name="use" value="home"> Home</label><br>
-            <label><input type="radio" name="use" value="business"> Business</label><br>
-            <label><input type="radio" name="use" value="charity"> Religious or Charitable Institution</label><br>
-            <label><input type="radio" name="use" value="gov"> Government</label><br>
-            <label><input type="radio" name="use" value="edu"> Educational Institution</label>
+            <label><input type="radio" name="use" value="home" id="use_home"> Home</label><br>
+            <label><input type="radio" name="use" value="business" id="use_business"> Business</label><br>
+            <label><input type="radio" name="use" value="charity" id="use_charity"> Religious or Charitable Institution</label><br>
+            <label><input type="radio" name="use" value="gov" id="use_gov"> Government</label><br>
+            <label><input type="radio" name="use" value="edu" id="use_edu"> Educational Institution</label>
          </div>
 
       <div class="group">
         <legend>Network Operating System (check all that apply)</legend>
-        <label><input type="checkbox" value="netware"> Netware</label><br>
-        <label><input type="checkbox" value="banyan"> Banyan Vines</label><br>
-        <label><input type="checkbox" value="windows"> Windows</label><br>
-        <label><input type="checkbox" value="ibm"> IBM Lan Server</label><br>
-        <label><input type="checkbox" value="pcnfs"> PC/NFS</label>
+        <label><input type="checkbox" value="netware" class="os"> Netware</label><br>
+        <label><input type="checkbox" value="banyan" class="os"> Banyan Vines</label><br>
+        <label><input type="checkbox" value="windows" class="os"> Windows</label><br>
+        <label><input type="checkbox" value="ibm" class="os"> IBM Lan Server</label><br>
+        <label><input type="checkbox" value="pcnfs" class="os"> PC/NFS</label>
      </div>
   </div>
 </fieldset>
 
-    <!-- Section 4: Comments -->
+
     <fieldset class="section">
       <label for="comment">Comments</label><br>
-      <textarea id="comment" rows="4" cols="40"></textarea><br>
+      <textarea id="comment" rows="4" cols="83"></textarea><br>
       <div class="buttons">
         <button type="button" onclick="send()">Send Registration</button>
-        <button type="button" onclick="cancel">Cancel</button>
+        <button type="button" onclick="cancel()">Cancel</button>
+        <button type="button" onclick="dismiss()" id="dismiss" style="display:none;">dismiss</button>
       </div>
     </fieldset>
+
+    <div id="error_message">
+
+    </div>
   </form>
 </body>
 </html>

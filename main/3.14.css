@@ -1,8 +1,14 @@
 body {
   font-family: Arial, sans-serif;
-  background: #c95bb3;
+  background: #f6f6f6;
 }
 
+h5 {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #d84315;
+  text-align: center;                                                   
+}
 form {
   background: yellow;
   width: 650px;
@@ -12,7 +18,7 @@ form {
   border-radius: 6px;
 }
 
-/* Common section styling */
+
 .section {
   border: 3px solid black;
   margin: 10px 0;
@@ -41,6 +47,7 @@ form {
 .row input,
 .row select {
   border: 1px solid black;
+  height: 30px;
   border-radius: 4px;
   padding: 3px;
 }
@@ -59,6 +66,8 @@ form {
   flex: 1; 
   padding: 5px;
   box-sizing: border-box; 
+  border: 1px solid black;
+  border-top-right-radius: 20px;
 }
 
 
@@ -67,7 +76,7 @@ legend {
   font-weight: bold;
 }
 
-/* Buttons */
+
 .buttons {
   text-align: center;
   margin-top: 10px;
@@ -85,4 +94,16 @@ button {
 
 button:hover {
   background: #555;
+}
+
+#error_message {
+  border: 2px solid #f30303;
+  background-color: #ffb3b3;
+  margin: 20px auto;
+  padding: 20px;
+  display:none;
+  text-align: center;
+  font-weight: bold;
+  color: #800000;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
