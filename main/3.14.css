@@ -20,7 +20,6 @@ form {
 
 
 .section {
-  border: 3px solid black;
   margin: 10px 0;
   padding: 5px;
 }
@@ -76,7 +75,20 @@ legend {
   font-weight: bold;
 }
 
+fieldset {
+  margin-bottom: 10px;
+  border: yellow;
+}
 
+#serial_number {
+  text-align: left;
+  margin-left: 10px;
+}
+
+.row_line {
+  border-top: 3px solid #eb6905;
+  margin: 15px 0;
+}
 .buttons {
   text-align: center;
   margin-top: 10px;
@@ -106,4 +118,18 @@ button:hover {
   font-weight: bold;
   color: #800000;
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.info_legend {
+  font-size: 40px;
+  font-weight: bold;
+  color: #d84315;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+#go_back {
+  margin-top: 20px;
+  background-color: #d84315;
+  cursor: zoom-in;
+  margin-left: 50%;
 }

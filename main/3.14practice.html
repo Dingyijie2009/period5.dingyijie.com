@@ -3,10 +3,14 @@
 <head>
   <title>3.14 Practice</title>
   <link href="3.14.css " rel="stylesheet" type="text/css"/>
-  <script src="3.14.js"></script>
 </head>
 <body>
-  <em><h2 style="text-align:center; color:darkred;size:30px;font-size:45px;">Product Registration</h2><h5>Powered by <a href="https://dingyijie.com"> Yijie</a> and <a href="https://chatgpt.com"> ChatGPT</a> (style's rules)</h5><em>
+  <h2 style="text-align:center; color:darkred; font-size:45px;">Product Registration</h2>
+<h5 style="text-align:center;">
+  Powered by <a href="https://dingyijie.com">Yijie</a> and 
+  <a href="https://chatgpt.com">ChatGPT</a> (style's rules)
+</h5>
+
 
   <form id="regForm">
     
@@ -43,6 +47,7 @@
       </div>
     </fieldset>
 
+    <div class="row_line"></div>
    
     <fieldset class="section">
       <div class="row">
@@ -59,12 +64,15 @@
       </div>
 
       <div class="row">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <label for="serial">Serial Number:</label>
+        &nbsp;
         <input type="text" id="serial" style="width:200px;">
       </div>
     </fieldset>
 
-   
+   <div class="row_line"></div>
+
     <fieldset class="section">
       <div class="groups-container">
         <div class="group">
@@ -87,20 +95,23 @@
   </div>
 </fieldset>
 
+<div class="row_line"></div>
 
     <fieldset class="section">
-      <label for="comment">Comments</label><br>
-      <textarea id="comment" rows="4" cols="83"></textarea><br>
-      <div class="buttons">
-        <button type="button" onclick="send()">Send Registration</button>
-        <button type="button" onclick="cancel()">Cancel</button>
-        <button type="button" onclick="dismiss()" id="dismiss" style="display:none;">dismiss</button>
-      </div>
-    </fieldset>
+  <label for="comment">Comments</label><br>
+  <textarea id="comment" rows="4" cols="83"></textarea><br>
+
+  <div class="buttons">
+    <button type="button" onclick="send()">Send Registration</button>
+    <button type="button" onclick="cancel()">Cancel</button>
+  </div>
+</fieldset>
+
 
     <div id="error_message">
 
     </div>
   </form>
+  <script src="3.14.js"></script>
 </body>
 </html>
