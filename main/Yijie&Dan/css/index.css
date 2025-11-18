@@ -2,69 +2,91 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: #f2f2f2;
 }
+
 
 nav {
     background: #333;
     color: #fff;
-    padding: 1em;
+    padding: 1em 2em;
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    margin-left: 2em;
 }
 
+.logo {
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    padding: 0.2em 0.5em;
+    transition: 0.2s;
+    border: 6px solid #f3ecf205;+
+}
+
+.logo a {
+    color: #4da3ff;
+}
+
+#navitar {
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f708d7;
+    border-radius: 10px;
+    padding: 0.2em 0.5em;
+    transition: 0.2s;
+    border: 6px solid #f3ecf205;
+    box-shadow: 1 3px 50px rgba(0,0,0,0.1);
+}
+
+/* Main Container */
 .container {
     max-width: 600px;
     margin: 2em auto;
-    background: #f9f9f9;
+    background: #fff;
     padding: 2em;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Date Navigation */
 .date-nav {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    font-size: 1.3em;
     margin-bottom: 1em;
-    font-size: 1.2em;
-}
-
-.date-nav span {
-    margin: 0 1em;
 }
 
 .arrow {
     cursor: pointer;
-    font-size: 1.5em;
     user-select: none;
+    padding: 0.2em 0.5em;
+    transition: 0.2s;
 }
 
+.arrow:hover {
+    color: #007bff;
+}
+
+/* Dish list */
 ul {
     list-style: none;
     padding: 0;
 }
 
-.dish-item {
-    margin-bottom: 1em;
-}
-
-.dish-name {
-    font-weight: bold;
-}
-
-.dish-price {
-    color: #007a3d;
-    margin-left: 0.5em;
-}
-
-.discount {
-    color: #e67e22;
-    margin-left: 0.5em;
-    font-size: 0.9em;
+ul li {
+    padding: 0.8em 1em;
+    margin-bottom: 0.5em;
+    background: #fafafa;
+    border-radius: 6px;
+    border: 1px solid #ddd;
 }
