@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    nav { background: #333; color: #fff; padding: 1em; display: flex; justify-content: space-between; align-items: center; }
+    nav a { color: #fff; text-decoration: none; margin-left: 2em; }
+    .container { max-width: 600px; margin: 2em auto; background: #f9f9f9; padding: 2em; border-radius: 8px; }
+    h2 { margin-top: 0; }
+    ul { list-style: none; padding: 0; }
+    .dish-item { margin-bottom: 1em; }
+    .dish-name { font-weight: bold; }
+    .dish-price { color: #007a3d; margin-left: 0.5em; }
+    .discount { color: #e67e22; margin-left: 0.5em; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <nav>
+    <span>Order Dishes</span>
+    <a href="Yijie&Dan/index.html">Main Page</a>
+  </nav>
+  <div class="container">
+    <h2>Your Selected Dishes</h2>
+    <ul id="selected-dish-list"></ul>
+  </div>
+  <script>
+    function renderSelectedDishes() {
+      const selected = JSON.parse(localStorage.getItem('selectedDishes') || '[]');
+      const list = document.getElementById('selected-dish-list');
+      list.innerHTML = '';
+      if (selected.length === 0) {
+        list.innerHTML = '<li>No dishes selected yet.</li>';
+        return;
+      }
+      selected.forEach(dish => {
+        const li = document.createElement('li');
+        li.className = 'dish-item';
+        li.innerHTML = `
+          <span class="dish-name">${dish.name}</span> - <span class="dish-price">$${(dish.price * 0.95).toFixed(2)}</span> <span class="discount">(5% off)</span>
+        `;
+        list.appendChild(li);
+      });
+    }
+    document.addEventListener('DOMContentLoaded', renderSelectedDishes);
+  </script>
+</body>
+</html>
