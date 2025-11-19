@@ -67,10 +67,10 @@ nav a {
     font-size: 1.4em;
 }
 
-frame {
-    width: 100%;
+#dish-list iframe {
+    width: 100% !important;
     height: 400px;
-    border: 2px solid #ccc;
+    border: 2px solid #181717;
     border-radius: 8px;
 }
 .date-nav {
