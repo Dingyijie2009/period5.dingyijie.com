@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Story+Script&display=swap');
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -55,6 +56,16 @@ nav a {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+.arrow-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3em 0.6em;
+}
+
+.arrow {
+    font-size: 1.4em;
+}
 
 /* Date Navigation */
 .date-nav {
@@ -83,5 +94,8 @@ nav a {
 
 .today_info {
     display: block;
-    font-weight: bold;
+    font-family: "Fascinate", system-ui;
+    font-weight: 700;
+    font-size: 1.5em;
+    font-style: normal;
 }
