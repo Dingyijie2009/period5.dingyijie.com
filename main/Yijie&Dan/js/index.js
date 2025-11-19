@@ -9,6 +9,9 @@ html[1] = "dish/2.html";
 html[2] = "dish/3.html";
 html[3] = "dish/4.html";
 html[4] = "dish/5.html";
+html[5] = "dish/6.html";
+html[6] = "dish/7.html";
+html[7] = "dish/8.html";
 
 var dishList = document.getElementById('dish-list');
 if (dishList) {
