@@ -21,13 +21,13 @@ nav a {
 }
 
 .logo {
-    font-size: 1em;
+    font-size: 25px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
     border-radius: 10px;
     padding: 0.2em 0.5em;
     transition: 0.2s;
-    border: 6px solid #f3ecf205;+
+    border: 6px solid #f3ecf205;
 }
 
 .logo a {
@@ -59,11 +59,19 @@ nav a {
 /* Date Navigation */
 .date-nav {
     display: flex;
-    justify-content: center;
+    flex-direction: column; 
     align-items: center;
-    gap: 1.5em;
+    gap: 1em;
     font-size: 1.3em;
     margin-bottom: 1em;
+}
+
+/* THIS forces arrows + date into a ROW */
+.date-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
 }
 
 .arrow {
@@ -73,20 +81,7 @@ nav a {
     transition: 0.2s;
 }
 
-.arrow:hover {
-    color: #007bff;
-}
-
-/* Dish list */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    padding: 0.8em 1em;
-    margin-bottom: 0.5em;
-    background: #fafafa;
-    border-radius: 6px;
-    border: 1px solid #ddd;
+.today_info {
+    display: block;
+    font-weight: bold;
 }
