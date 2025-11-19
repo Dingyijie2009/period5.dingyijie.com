@@ -77,10 +77,10 @@ nav a {
     margin-bottom: 1em;
 }
 
-/* THIS forces arrows + date into a ROW */
+
 .date-row {
     display: flex;
-    flex-direction: row;
+    flex-direction:none;
     align-items: center;
     gap: 1em;
 }
