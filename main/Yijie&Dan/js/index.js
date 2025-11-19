@@ -26,7 +26,7 @@ if (next) {
             currentIndex = 0;
         }
         if (dishList) {
-            dishList.innerHTML = '<iframe src="' + html[currentIndex] + '" frameborder="0" style="width:100%; height:400px;"></iframe>';
+            dishList.innerHTML = '<iframe src="' + html[currentIndex] + '"></iframe>';
         }
     };
 }
@@ -38,7 +38,7 @@ if (prev) {
             currentIndex = html.length - 1;
         }
         if (dishList) {
-            dishList.innerHTML = '<iframe src="' + html[currentIndex] + '" frameborder="0" style="width:100%; height:400px;"></iframe>';
+            dishList.innerHTML = '<iframe src="' + html[currentIndex] + '" frameborder="2" style="width:100%; height:400px;"></iframe>';
         }
     };
 }
