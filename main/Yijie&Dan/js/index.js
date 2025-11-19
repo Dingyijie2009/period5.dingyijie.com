@@ -40,4 +40,4 @@ if (prev) {
     };
 }
 
-
+dateDisplay.textContent = new Date().toLocaleDateString();

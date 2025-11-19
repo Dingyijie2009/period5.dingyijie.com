@@ -85,6 +85,12 @@ nav a {
     gap: 1em;
 }
 
+#date-display {
+    font-family: "Fascinate", system-ui;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #ff1010;
+}
 .arrow {
     cursor: pointer;
     user-select: none;
