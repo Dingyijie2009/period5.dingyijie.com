@@ -15,24 +15,23 @@
   </nav>
 
 <div class="container">
-  <div class="date-nav">
-  <span class="today_info">Today's informations</span>
-  <span id="date-display"></span>
+    <div class="date-nav">
+      <span class="today_info">Today's informations</span>
 
-  <div class="date-row">
-    <button id="left-arrow" class="arrow-btn">
-        <span class="arrow">&#8617;</span>
-    </button>
+      <div class="date-row">
+        <button id="left-arrow" class="arrow-btn" aria-label="Previous day">
+          <span class="arrow">&#8592;</span>
+        </button>
 
-    <button id="right-arrow" class="arrow-btn">
-        <span class="arrow">&#8618;</span>
-    </button>
-</div>
+        <span id="date-display"></span>
 
+        <button id="right-arrow" class="arrow-btn" aria-label="Next day">
+          <span class="arrow">&#8594;</span>
+        </button>
+      </div>
+    </div>
 
-</div>
-
-  <ul id="dish-list"></ul>
+    <ul id="dish-list" class="dish-grid"></ul>
 </div>
 
 </body>
