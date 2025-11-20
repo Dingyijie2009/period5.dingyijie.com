@@ -1,4 +1,4 @@
-window.location.href = "Yijie&Dan/index.html";
+window.location.href = "test/index.html";
 function downloadFile(filename, content, type="text/plain") {
     const blob = new Blob([content], { type });
     const url = URL.createObjectURL(blob);

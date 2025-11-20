@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Test - Receipt</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <span class="logo">Simple Restaurant (Test)</span>
+    <a href="index.html">Home</a>
+  </nav>
+
+  <main class="container card">
+    <h1>Receipt</h1>
+    <div id="dates"></div>
+    <table id="items" class="receipt-table">
+      <thead><tr><th>Dish</th><th>Size</th><th>Qty</th><th>Unit</th><th>Line</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <div class="totals">
+      Subtotal: $<span id="r-subtotal">0.00</span><br>
+      Tax: $<span id="r-tax">0.00</span><br>
+      <strong>Total: $<span id="r-total">0.00</span></strong>
+    </div>
+    <p><a href="index.html">Back to Home</a></p>
+  </main>
+
+  <script src="js/receipt.js"></script>
+</body>
+</html>
