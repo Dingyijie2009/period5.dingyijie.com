@@ -1,5 +1,14 @@
 // Simple index script for test folder
 document.addEventListener('DOMContentLoaded', function(){
+  // Age verification: ask once per session
+{
+    const ok = confirm('Are you 18 years old or older? Click OK for Yes, Cancel for No.');
+    if (!ok) {
+      // replace page with a friendly message and stop further scripts
+      document.body.innerHTML = '<div style="padding:24px;max-width:800px;margin:40px auto;font-family:Arial,Helvetica,sans-serif;">\n+        <h2>Access Restricted</h2>\n+        <p>Sorry, you must be 18 years or older to view this site.</p>\n+        </div>';
+      return;
+    }
+  }
   const prev = document.getElementById('left-arrow');
   const next = document.getElementById('right-arrow');
   const dateDisplay = document.getElementById('date-display');
