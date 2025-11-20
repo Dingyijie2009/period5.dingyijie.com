@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Place Order</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:16px;background:#f6f6f8}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+    .container{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 360px;gap:16px}
+    .card{background:#fff;padding:14px;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
+    h2{margin:0 0 8px}
+    .category{margin-bottom:12px}
+    .dish-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-top:1px solid #eee}
+    .dish-row:first-of-type{border-top:0}
+    .dish-left{display:flex;align-items:center;gap:12px}
+    .sizes label{margin-right:8px}
+    .qty{width:56px}
+    .btn{padding:6px 10px;border-radius:6px;border:0;cursor:pointer}
+    .btn-add{background:#2d8fdd;color:white}
+    .btn-remove{background:#e74c3c;color:white}
+    .cart-list{max-height:420px;overflow:auto;margin-bottom:8px}
+    .cart-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #eee}
+    .cart-totals{margin-top:8px}
+    .controls{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+    button[disabled]{opacity:0.5;cursor:not-allowed}
+    .small-muted{font-size:0.9rem;color:#666}
+    a.cancel{color:#333;text-decoration:none;padding:8px 12px;background:#eee;border-radius:6px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Place Your Order</h1>
+    <nav><a class="cancel" href="index.html">Cancel & Home</a></nav>
+  </header>
+
+  <div class="container">
+    <div>
+      <div class="card">
+        <h2>Menu</h2>
+        <div id="menu"></div>
+      </div>
+    </div>
+
+    <aside>
+      <div class="card">
+        <h2>Your Cart</h2>
+        <div class="cart-list" id="cart-list">
+          <div class="small-muted">Your cart is empty</div>
+        </div>
+
+        <div class="cart-totals">
+          <div>Subtotal: $<span id="subtotal">0.00</span></div>
+          <div>Tax (8%): $<span id="tax">0.00</span></div>
+          <div><strong>Total: $<span id="total">0.00</span></strong></div>
+        </div>
+
+        <div class="controls">
+          <button id="proceed" class="btn" disabled>Proceed</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="js/order.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Receipt</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;margin:16px;background:#fafafa}
+    .card{background:#fff;padding:16px;border-radius:8px;max-width:900px;margin:0 auto;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+    h1,h2{margin:0 0 8px}
+    .row{display:flex;justify-content:space-between;margin-top:8px}
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:8px;border-bottom:1px solid #eee;text-align:left}
+    .right{text-align:right}
+    .totals{margin-top:12px;text-align:right}
+    .back{display:inline-block;margin-top:12px;padding:8px 12px;background:#eee;border-radius:6px;text-decoration:none;color:#222}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Receipt</h1>
+    <div class="row"><div>Order Date: <span id="order-date"></span></div><div>Delivery Date: <span id="delivery-date"></span></div></div>
+
+    <table id="items-table">
+      <thead><tr><th>Dish</th><th>Size</th><th class="right">Qty</th><th class="right">Unit</th><th class="right">Line</th></tr></thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="totals">
+      <div>Subtotal: $<span id="r-subtotal">0.00</span></div>
+      <div>Tax: $<span id="r-tax">0.00</span></div>
+      <div><strong>Total: $<span id="r-total">0.00</span></strong></div>
+    </div>
+
+    <a class="back" href="index.html">Back to Home</a>
+  </div>
+
+  <script>
+    (function(){
+      const orderJson = sessionStorage.getItem('latestOrder');
+      if(!orderJson){ document.body.innerHTML = '<div style="padding:24px">No order found. <a href="order.html">Place an order</a></div>'; return; }
+      const order = JSON.parse(orderJson);
+      const items = order.items || [];
+      const tbody = document.querySelector('#items-table tbody');
+      items.forEach(it=>{
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${it.name}</td><td>${it.size.toUpperCase()}</td><td class="right">${it.qty}</td><td class="right">$${it.unit.toFixed(2)}</td><td class="right">$${(it.unit*it.qty).toFixed(2)}</td>`;
+        tbody.appendChild(tr);
+      });
+
+      const od = new Date(order.date);
+      document.getElementById('order-date').textContent = od.toLocaleString();
+      const dd = new Date(od);
+      dd.setDate(dd.getDate()+1);
+      document.getElementById('delivery-date').textContent = dd.toLocaleDateString();
+
+      document.getElementById('r-subtotal').textContent = (order.subtotal||0).toFixed(2);
+      document.getElementById('r-tax').textContent = (order.tax||0).toFixed(2);
+      document.getElementById('r-total').textContent = (order.total||0).toFixed(2);
+    })();
+  </script>
+</body>
+</html>
