@@ -1,4 +1,4 @@
-// receipt.js - reads latestOrder from sessionStorage and shows receipt
+
 document.addEventListener('DOMContentLoaded', function(){
   const orderJson = sessionStorage.getItem('latestOrder');
   if(!orderJson){ document.querySelector('.container').innerHTML = '<p class="muted">No order found. Go to <a href="order.html">Order</a>.</p>'; return; }

@@ -1,4 +1,4 @@
-window.location.href = "test/index.html";
+window.location.href = "order_food_online/index.html";
 function downloadFile(filename, content, type="text/plain") {
     const blob = new Blob([content], { type });
     const url = URL.createObjectURL(blob);

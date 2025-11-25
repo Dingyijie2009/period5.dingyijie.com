@@ -1,4 +1,4 @@
-// Simple order page script for test folder
+
 document.addEventListener('DOMContentLoaded', function(){
   const TAX = 0.08;
   const menuEl = document.getElementById('menu');
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
   const totalEl = document.getElementById('total');
   const proceedBtn = document.getElementById('proceed');
 
-  // simple catalog separated by categories
+
   const catalog = {
     beef:[{id:'b1',name:'Beef Bulgogi Bowl',price:{s:9,m:14,l:18}}],
     chicken:[{id:'c1',name:'Citrus Chicken Salad',price:{s:7.5,m:11.5,l:14.5}}],
@@ -43,12 +43,12 @@ document.addEventListener('DOMContentLoaded', function(){
       menuEl.appendChild(div);
     }
 
-    // add handlers
+
     menuEl.querySelectorAll('.add-btn').forEach(b=>b.addEventListener('click',function(){
       const id = this.getAttribute('data-id');
       const size = document.querySelector(`input[name="size_${id}"]:checked`).value;
       const qty = parseInt(document.getElementById(`qty_${id}`).value) || 1;
-      // find item in catalog
+
       let found = null;
       for(const cat in catalog){ found = catalog[cat].find(i=>i.id===id); if(found) break; }
       if(!found) return;
@@ -80,11 +80,11 @@ document.addEventListener('DOMContentLoaded', function(){
     proceedBtn.disabled = subtotal < 0.01;
   }
 
-  // If the user came from index with preselected dishes, read them and add to cart
+  
   const pre = JSON.parse(sessionStorage.getItem('preselect')||'[]');
   if(pre.length){
     pre.forEach(p=>{
-      // map preselect id to a catalog item if possible; otherwise accept generic
+      
       let found = null;
       for(const cat in catalog){ found = catalog[cat].find(i=>i.id===p.id); if(found) break; }
       if(found){ cart.push({id:found.id, name:found.name, size:p.size||'m', qty:p.qty||1, unit:found.price[p.size||'m']}); }
@@ -99,6 +99,6 @@ document.addEventListener('DOMContentLoaded', function(){
     location.href = 'receipt.html';
   });
 
-  // initial render
+  
   renderMenu(); renderCart();
 });

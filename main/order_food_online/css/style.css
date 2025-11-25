@@ -1,4 +1,4 @@
-/* Simple styles for test pages - beginner friendly */
+
 body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f5f5f7;color:#222}
 nav{background:#222;color:#fff;padding:10px 14px;display:flex;justify-content:space-between}
 .container{max-width:900px;margin:18px auto;padding:10px}
@@ -19,3 +19,12 @@ nav{background:#222;color:#fff;padding:10px 14px;display:flex;justify-content:sp
 .receipt-table th,.receipt-table td{padding:6px;border-bottom:1px solid #eee;text-align:left}
 @media(max-width:800px){.dish-grid{grid-template-columns:repeat(2,1fr)}.two-col{grid-template-columns:1fr}}
 @media(max-width:500px){.dish-grid{grid-template-columns:1fr}}
+
+
+
+
+
+/* Daily images (row of three) */
+.daily-images{display:flex;gap:8px;justify-content:center;align-items:center}
+.daily-images img{width:calc((100% - 16px)/3);max-height:220px;object-fit:cover;border-radius:6px}
+@media(max-width:600px){.daily-images{flex-direction:column}.daily-images img{width:100%;max-height:320px}}
