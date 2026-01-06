@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@100..900&display=swap');
 h1 {
 	text-align: center;
 	font-family: "Roboto", sans-serif;
@@ -47,7 +47,36 @@ h1 {
 	}
 }
 
+.career-section h3,h4{
+  font-family: "Bitcount Single Ink", system-ui;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0,
+    "SZP1" 0,
+    "SZP2" 0,
+    "XPN1" 0,
+    "XPN2" 0,
+    "YPN1" 0,
+    "YPN2" 0;
+  font-size: 48px;
+}
+.entry-level ul {
+  list-style:circle;
+}
 
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 4000,
+  'GRAD' 0,
+  'opsz' 48
+}
 
 body {
   margin: 0;
@@ -66,15 +95,39 @@ body {
   margin: 2rem auto;
   padding: 0 1rem;
 }
-.overview-description p{
+p{
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     font-size:0.4cm;
 
 }
+.training ul{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size:0.4cm;
+     color:#0a11cf
+
+}
+.entry-level ul{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size:0.4cm;
+    color:#5b0ad5
+
+}
+.salary ul{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size:0.4cm;
+    color:#5b0bd4
+
+}
 .overview-description mark{
      background-color: rgb(189, 244, 8);
 }
+
+
+
 .career-section {
   background: #ffffff;
   border-radius: 8px;
@@ -200,4 +253,17 @@ nav {
     padding: 0;
     background: transparent;
   }
+}
+
+/* Salary styling */
+.salary-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 3rem;
+  color: #333;
+}
+.salary-amount {
+  font-weight: 700;
+  color: #1a7f37;
 }
