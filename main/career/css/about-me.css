@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #1a3a52;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f7fa;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #333;
+}
+
+.career-content {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.career-section {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #d38a04;
+}
+
+.career-section h1,
+.career-section h2 {
+  margin: 0 0 1rem 0;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.career-section h2::after {
+  display: none;
+}
+
+.career-section h3 {
+  margin: 1.5rem 0 0.75rem 0;
+  color: #0066cc;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0.75rem 0;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+ul li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #e46d0c;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+nav {
+  background:white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.fa-bars {
+  font-size: 1.5rem;
+  color: rgb(228, 34, 8)!important;
+  cursor: pointer;
+}
+
+.fa-bars:hover {
+  color: #0066cc;
+}
+
+.menu a {
+  color: #f00808;
+  letter-spacing: 0.05rem;
+  display: block;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  background: rgba(0, 102, 204, 0.1);
+  color: #0066cc;
+}
+
+.menu {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
+.show-menu {
+  height: 12rem;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.nav-header img,
+.logo {
+  width: 140px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: brightness(1.1);
+}
+
+
+.overview-description {
+  margin: 1.5rem 0;
+}
+
+.overview-description mark {
+  background: #ddc703;
+  padding: 0.2rem 0.4rem;
+  border-radius: 2px;
+}
+
+.high-school-courses,
+.post-secondary-education,
+.institutions,
+.learning-skills-content,
+.future-learning-skills,
+.subject-area,
+.why-essential,
+.career-choice {
+  margin: 1.5rem 0;
+}
+
+.high-school-courses ul,
+.post-secondary-education ul,
+.institutions ul,
+.learning-skills-content ul,
+.future-learning-skills ul,
+.subject-area ul,
+.why-essential ul,
+.career-choice ul {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #555;
+}
+
+
+@media (min-width: 800px) {
+  .career-content {
+    padding: 0;
+  }
+  
+  .career-section {
+    padding: 2rem 2.5rem;
+  }
+
+  .nav-main {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  .nav-header {
+    padding: 0;
+  }
+  
+  .nav-header img,
+  .logo {
+    width: 180px;
+  }
+  
+  .fa-bars {
+    display: none;
+  }
+
+  .menu {
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .menu a {
+    padding: 0.75rem 1.5rem;
+    margin: 0;
+    color: #f00606;
+  }
+  
+  .menu a:hover {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border-left: none;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .career-section h2 {
+    font-size: 2rem;
+  }
+
+  .career-section h3 {
+    font-size: 1.1rem;
+  }
+}

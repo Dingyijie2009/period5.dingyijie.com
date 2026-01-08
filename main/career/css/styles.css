@@ -89,7 +89,7 @@ body {
 .career-section {
     padding: 200rem;
 }
-/* Career page content styles */
+
 .career-content {
   max-width: 1000px;
   margin: 2rem auto;
@@ -255,7 +255,7 @@ nav {
   }
 }
 
-/* Salary styling */
+
 .salary-line {
   display: inline-flex;
   align-items: center;
