@@ -86,9 +86,9 @@ body {
   line-height: 2.2;
   font-size: 0.875rem;
 }
+/* removed accidental huge padding */
 .career-section {
-    padding: 200rem;
-    border-left: 4px solid #eb0282;
+  /* fixed: normal padding is applied later in the file */
 }
 
 .career-content {
@@ -269,4 +269,57 @@ nav {
 .salary-amount {
   font-weight: 700;
   color: #1a7f37;
+}
+
+/* Decorative hero, icons, and subtle animations */
+.hero {
+  background: linear-gradient(135deg,#7b61ff,#ff6b8a);
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(123,97,255,0.15);
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+  justify-content:center;
+}
+.hero-icon {
+  display:inline-flex;
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.15);
+  align-items:center;
+  justify-content:center;
+  font-size:1.1rem;
+}
+.hero-sub {opacity:0.95;margin-top:0.4rem;font-size:0.95rem;}
+.wave {display:block;position:absolute;left:0;right:0;bottom:-1px;height:60px;opacity:0.7;}
+
+.section-icon {display:inline-block;width:38px;height:38px;border-radius:50%;background:#f3f4f6;color:#7b61ff;display:flex;align-items:center;justify-content:center;margin-right:0.5rem;font-size:1.1rem;box-shadow:0 2px 6px rgba(0,0,0,0.07);}
+.career-section {transition:transform .18s ease,box-shadow .18s ease;}
+.career-section:hover {transform: translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,0.08);}
+.career-section h2, .career-section h1 {display:flex; align-items:center; gap:0.5rem;}
+.overview-description p{margin-bottom:0.75rem;}
+
+/* subtle fade-in */
+.career-section {opacity:0;transform: translateY(8px);animation:fadeInUp .45s forwards;}
+@keyframes fadeInUp {to{opacity:1;transform:none;}}
+
+/* small responsive tweak for hero */
+@media (max-width: 480px){
+  .hero h1 {font-size:1.2rem}
+  .hero-icon {width:34px;height:34px}
 }
