@@ -1,109 +1,345 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   min-height: 100vh;
-  background: linear-gradient(to bottom, #151616, #1f2e3f 70%, #2a2e44);
-  overflow: hidden;
+  background: linear-gradient(to bottom, #0f0f1e, #1a1a3f, #0f0f1e);
+  font-family: 'Protest Riot', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
 
+/* Stars Background */
 .stars {
-  width: 1px;
-  height: 1px;
-  position: absolute;
+  position: fixed;
+  width: 2px;
+  height: 2px;
   background: white;
-  box-shadow: 2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 15vh 1px white,
-    22vw 22vh 1px white, 28vw 12vh 2px white, 32vw 32vh 1px white,
-    38vw 18vh 2px white, 42vw 35vh 1px white, 48vw 25vh 2px white,
-    53vw 42vh 1px white, 58vw 15vh 2px white, 63vw 38vh 1px white,
-    68vw 28vh 2px white, 73vw 45vh 1px white, 78vw 32vh 2px white,
-    83vw 48vh 1px white, 88vw 20vh 2px white, 93vw 52vh 1px white,
-    98vw 35vh 2px white, 5vw 60vh 1px white, 12vw 65vh 2px white,
-    18vw 72vh 1px white, 25vw 78vh 2px white, 30vw 85vh 1px white,
-    35vw 68vh 2px white, 40vw 82vh 1px white, 45vw 92vh 2px white,
-    50vw 75vh 1px white, 55vw 88vh 2px white, 60vw 95vh 1px white,
-    65vw 72vh 2px white, 70vw 85vh 1px white, 75vw 78vh 2px white,
-    80vw 92vh 1px white, 85vw 82vh 2px white, 90vw 88vh 1px white,
-    95vw 75vh 2px white;
-  animation: twinkle 8s infinite linear;
+  top: 20%;
+  left: 10%;
+  box-shadow: 
+    50px 80px 2px white, 100px 150px 2px white, 150px 100px 1px white,
+    200px 200px 1px white, 250px 120px 2px white, 300px 250px 1px white,
+    350px 180px 2px white, 400px 300px 1px white, 450px 220px 2px white,
+    500px 380px 1px white, 550px 150px 2px white, 600px 350px 1px white,
+    650px 250px 2px white, 700px 400px 1px white, 750px 280px 2px white,
+    800px 420px 1px white, 850px 180px 2px white, 900px 450px 1px white;
+  animation: twinkle 4s infinite ease-in-out;
+  pointer-events: none;
 }
 
-.main-content{
-    width:auto;
-    height:30em;
-    padding:15px;
-    margin:100px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:1.25rem;
-  
-   
+@keyframes twinkle {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Main Game Container */
+.game-container {
+  width: 100%;
+  max-width: 1300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Game Title */
+.game-title {
+  text-align: center;
+  color: #00ff88;
+  font-size: 48px;
+  text-shadow: 0 0 20px rgba(0, 255, 136, 0.8), 0 0 40px rgba(100, 50, 255, 0.6);
+  margin-bottom: 10px;
+}
+
+.game-title h1 {
+  margin: 0;
+}
+
+/* Status Info */
+.game-status {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  color: #00ff88;
+  font-size: 20px;
+  padding: 10px 30px;
+  background: rgba(0, 255, 136, 0.1);
+  border: 2px solid #00ff88;
+  border-radius: 10px;
+}
+
+.round-info, .wins-info {
+  display: flex;
+  gap: 10px;
+}
+
+.round-info span, .wins-info span {
+  color: #ffff00;
+  font-weight: bold;
+}
+
+/* Item Display */
+.item-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.item-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  background: rgba(100, 50, 255, 0.2);
+  border: 3px solid #00ff88;
+  border-radius: 15px;
+  padding: 10px;
+  animation: itemGlow 2s ease-in-out infinite;
+}
+
+@keyframes itemGlow {
+  0%, 100% { box-shadow: 0 0 10px rgba(0, 255, 136, 0.5); }
+  50% { box-shadow: 0 0 30px rgba(0, 255, 136, 0.8); }
+}
+
+.item-name-box {
+  text-align: center;
+  color: #ffff00;
+  font-size: 24px;
+  font-weight: bold;
+  min-height: 40px;
 }
 
 .creator {
-    width: auto;
-    height: auto;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Protest Riot", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 30px;
-    color: rgb(110, 5, 230);
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #00ff88;
+  font-size: 14px;
+  opacity: 0.7;
+  text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
 }
 
-/* From Uiverse.io by hexday */ 
+/* Status Message */
+.status-message {
+  text-align: center;
+  color: #00ff88;
+  font-size: 18px;
+  padding: 15px 20px;
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid #00ff88;
+  border-radius: 8px;
+  min-height: 60px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Final Result */
+.final-result {
+  text-align: center;
+  color: #ffff00;
+  background: rgba(0, 255, 136, 0.15);
+  border: 3px solid #ffff00;
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 30px rgba(255, 255, 0, 0.6);
+}
+
+.final-result h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+}
+
+.final-result p {
+  font-size: 20px;
+  color: #00ff88;
+  margin-bottom: 20px;
+}
+
+/* Joker Container */
+.joker-container {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#joker {
+  position: absolute;
+  left: 0;
+  bottom: 40%;
+  transition: left 0.8s ease-out;
+  transform: translateX(-50%);
+}
+
+.joker-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.joker-head {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ff1493, #ff69b4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(255, 20, 147, 0.8);
+}
+
+.joker-hat {
+  position: absolute;
+  top: -15px;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 30px solid #ffff00;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.8));
+}
+
+.joker-face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.eye {
+  font-size: 24px;
+  color: #000;
+  position: absolute;
+}
+
+.eye-left {
+  left: 18px;
+  top: 20px;
+}
+
+.eye-right {
+  right: 18px;
+  top: 20px;
+}
+
+.mouth {
+  font-size: 40px;
+  position: absolute;
+  bottom: 10px;
+}
+
+/* Joker Fall Animation */
+@keyframes jokerFall {
+  0% {
+    bottom: 40%;
+    opacity: 1;
+  }
+  80% {
+    bottom: -50%;
+    opacity: 1;
+  }
+  100% {
+    bottom: -200%;
+    opacity: 0;
+  }
+}
+
+.joker.falling {
+  animation: jokerFall 1.2s ease-in forwards;
+}
+
+/* Joker Scared Animation */
+@keyframes jokerScared {
+  0%, 100% { transform: translateX(-50%) scaleX(1); }
+  25% { transform: translateX(-50%) scaleX(-1); }
+  50% { transform: translateX(-50%) scaleX(1); }
+  75% { transform: translateX(-50%) scaleX(-1); }
+}
+
+.joker.scared {
+  animation: jokerScared 0.4s ease-in-out;
+
+/* Card Terminal Style */
 .card {
-  background-color: rgba(217, 217, 217, 0.18);
+  background-color: rgba(20, 20, 40, 0.8);
   backdrop-filter: blur(8px);
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #00ff88;
+  border-radius: 10px;
   overflow: hidden;
-  width: 400px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
 }
 
 .terminal-header {
-  background-color: #202425;
+  background-color: #1a1a2e;
   padding: 10px 15px;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #00ff88;
 }
 
 .terminal-title {
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
+  color: #00ff88;
+  font-size: 16px;
+  font-weight: bold;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .terminal-icon {
-  color: #006adc;
+  color: #ffff00;
 }
 
 .terminal-body {
-  background-color: #202425;
-  color: #ffffff;
-  padding: 15px;
-  font-family: "Courier New", Courier, monospace;
+  background-color: #0f0f1e;
+  color: #00ff88;
+  padding: 20px;
+  font-family: 'Courier New', monospace;
 }
 
 .command-line {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .prompt {
-  color: #ffffff;
-  margin-right: 10px;
+  color: #ffff00;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .input-wrapper {
@@ -114,131 +350,180 @@ body {
 .input-field {
   background-color: transparent;
   border: none;
-  color: #006adc;
-  font-family: inherit;
-  font-size: 14px;
+  border-bottom: 2px solid #00ff88;
+  color: #00ff88;
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
   outline: none;
   width: 100%;
+  padding: 5px 0;
   padding-right: 10px;
 }
 
 .input-field::placeholder {
-  color: rgba(202, 19, 19, 0.5);
+  color: rgba(0, 255, 136, 0.5);
 }
 
-.input-wrapper::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 8px;
-  height: 15px;
-  background-color: #ffffff;
-  animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
+.input-field:focus {
+  border-bottom-color: #ffff00;
+  color: #ffff00;
 }
 
 /* From Uiverse.io by barisdogansutcu */ 
 button {
-  font-family: inherit;
-  border: none;
-  outline: 1px dotted rgb(37, 37, 37);
-  outline-offset: -4px;
-  cursor: pointer;
-  background: hsl(0deg 0% 75%);
-  box-shadow:
-    inset -1px -1px #292929,
-    inset 1px 1px #fff,
-    inset -2px -2px rgb(158, 158, 158),
-    inset 2px 2px #ffffff;
-  font-size: 14px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-family: 'Protest Riot', Arial, sans-serif;
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding: 5px 30px;
+  border: 2px solid #00ff88;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #00ff88;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
 }
 
-button:active {
-  box-shadow:
-    inset -1px -1px #fff,
-    inset 1px 1px #292929,
-    inset -2px -2px #ffffff,
-    inset 2px 2px rgb(158, 158, 158);
+button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #00ff88, #00cc6a);
+  color: #1a1a2e;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.8);
+  transform: scale(1.05);
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: 0 0 10px rgba(100, 100, 100, 0.3);
 }
 
 
 .buttons {
   display: flex;
-  gap: 4rem;
+  gap: 20px;
   justify-content: center;
-  margin-top: 1rem;
-  width: 400px;
-  max-width: 100%;
-  box-sizing: border-box;
-  padding-bottom: 100px;
+  flex-wrap: wrap;
+  margin: 20px 0;
 }
 
-.buttons button {
-  padding: 8px 26px;
-  border-radius: 6px;
-  background: linear-gradient(180deg, #6e6b6b, #d9d9d9);
-  transition: transform 120ms ease, box-shadow 120ms ease;
+.btn-go, .btn-next, .btn-reset {
+  min-width: 120px;
 }
 
-.buttons button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+/* Scale Control */
+.scale-control {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #00ff88;
+  font-size: 16px;
+  padding: 10px 20px;
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid #00ff88;
+  border-radius: 8px;
 }
 
-@media (max-width: 480px) {
-  .card { width: 320px; }
-  .buttons { width: 320px; }
-  .main-content { margin: 40px; height: auto; }
+.scale-control label {
+  font-weight: bold;
 }
 
-.ruler {
-  width: 200px;
-  height: 100px;
-  object-fit: contain;
-  position: relative;
+.scale-control select {
+  background-color: #1a1a2e;
+  color: #ffff00;
+  border: 1px solid #00ff88;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.joker {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-  position: absolute;
-  top: -100px; /* Adjust to position on top of ruler */
-  left: 50%;
-  transform: translateX(-50%);
+.scale-control select:focus {
+  outline: none;
+  border-color: #ffff00;
+}
+
+/* Ruler Section */
+.ruler-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
 
 .ruler-container {
   position: relative;
   width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 4 / 1;
 }
 
-.ruler-container .ruler {
+.ruler-svg {
   width: 100%;
-  height: 100px;
-  object-fit: contain;
+  height: 100%;
+  display: block;
 }
 
-.ruler-container .joker {
+.price-label {
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: bold;
+  fill: #ffff00;
+}
 
-  top: -200px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
+@media (max-width: 768px) {
+  .game-title h1 {
+    font-size: 32px;
+  }
+  
+  .game-status {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .item-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .ruler-container {
+    aspect-ratio: 2 / 1;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-container {
+    padding: 10px;
+    gap: 15px;
+  }
+  
+  .game-title h1 {
+    font-size: 24px;
+  }
+  
+  .item-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .buttons {
+    gap: 10px;
+  }
+  
+  button {
+    min-width: 90px;
+    padding: 8px 15px;
+    font-size: 12px;
+  }
 }
