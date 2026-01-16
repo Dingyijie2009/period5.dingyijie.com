@@ -206,3 +206,7 @@ button:active {
   .buttons { width: 320px; }
   .main-content { margin: 40px; height: auto; }
 }
+
+.ruler{
+  background-image: url('img/ruler.png');
+}
