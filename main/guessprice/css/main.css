@@ -130,7 +130,7 @@ body {
 }
 
 .input-field::placeholder {
-  color: rgba(202, 19, 19, 0.5);
+  color: rgba(236, 233, 233, 0.5);
 }
 
 .input-wrapper::after {
@@ -214,8 +214,9 @@ button:active {
 
 
 .ruler-container {
-  position: relative;   /* 🔴 必须 */
+  position: relative;  
   width: 90%;
+  transform: translateY(180%);
   max-width: 900px;
   margin: 0 auto;
   height: 160px;
@@ -228,20 +229,29 @@ button:active {
 
 .joker {
   position: absolute;
-  bottom: 100px;
+  bottom: 158px;
 
   left: 0%;
-  transform: translateX(-50%);
+  transform: translateX(-%);
 
   width: 80px;
   height: auto;
 }
 
+.items-wrapper {
+  position: fixed;
+  bottom: 530px;           /* same height you were using */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;               /* space between info and items */
+}
+
 .items {
-    display: flex;         
-    gap: 10px;              
-    justify-content: center; 
-    margin-top: -20px;
+  display: flex;
+  gap: 10px;
 }
 
 .item {
@@ -255,4 +265,47 @@ button:active {
 
 .item:hover {
     transform: scale(1.1);  
+}
+
+
+/* From Uiverse.io by andrew-demchenk0 */ 
+.info {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 320px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  background: #509AF8;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px -3px #111;
+}
+
+.info__icon {
+  width: 20px;
+  height: 20px;
+  transform: translateY(-2px);
+  margin-right: 8px;
+}
+
+.info__icon path {
+  fill: #fff;
+}
+
+.info__title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+
+.info__close {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.info__close path {
+  fill: #fff;
 }

@@ -1,4 +1,4 @@
-window.location.href = "career/career.html";
+window.location.href = "guessprice/index.html";
 function downloadFile(filename, content, type="text/plain") {
     const blob = new Blob([content], { type });
     const url = URL.createObjectURL(blob);
