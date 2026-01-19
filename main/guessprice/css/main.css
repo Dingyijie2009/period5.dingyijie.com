@@ -212,31 +212,32 @@ button:active {
   .main-content { margin: 40px; height: auto; }
 }
 
-
 .ruler-container {
-  position: relative;  
+  position: relative;
   width: 90%;
-  transform: translateY(180%);
   max-width: 900px;
   margin: 0 auto;
-  height: 160px;
+  height: 160px; /* adjust if your ruler image is taller */
 }
+
 
 .ruler {
   width: 100%;
-  height: auto;
+  height: 250%;
+  display: block;
 }
+
 
 .joker {
   position: absolute;
-  bottom: 158px;
-
-  left: 0%;
-  transform: translateX(-20%);
-
+  bottom: 0;           /* sticks to the bottom of the ruler */
+  left: 0%;            /* start at the left */
+  transform: translateX(0); /* or -50% if you want center at a mark */
   width: 80px;
   height: auto;
 }
+
+
 
 .items-wrapper {
   position: fixed;
